@@ -1,0 +1,39 @@
+---
+description: Portfolio color system — Bronze Spice palette and neutrals
+alwaysApply: true
+---
+
+# Design system
+
+Use **Bronze Spice** (`spice-*`) for brand/accent color and **neutral** semantic tokens for layout, text, and surfaces. Do not use cyan, blue, or unrelated accent colors unless the user asks.
+
+## Spice scale (Tailwind: `spice-50` … `spice-950`)
+
+| Token | Hex |
+|-------|-----|
+| 50 | `#FFF1E6` |
+| 100 | `#FFE2CC` |
+| 200 | `#FEC59A` |
+| 300 | `#FEA867` |
+| 400 | `#FE8C34` |
+| 500 | `#FE6F01` |
+| 600 | `#CB5901` |
+| 700 | `#984201` |
+| 800 | `#652C01` |
+| 900 | `#331600` |
+| 950 | `#240F00` |
+
+## Semantic tokens (prefer these in components)
+
+- `text-accent` / `bg-accent` — primary brand (`spice-500`, `#FE6F01`)
+- `text-accent-highlight` — emphasized words (`spice-400`, `#FE8C34`)
+- `text-accent-muted` — darker accent (`spice-700`)
+- `text-foreground`, `text-muted`, `bg-background`, `bg-surface`, `border-border` — neutrals (theme-aware light/dark)
+
+## Usage
+
+- Highlights and secondary emphasis: `text-accent-highlight` or `spice-400`, not `text-cyan-*`.
+- Gradients and glows: `spice-400` / `spice-500` / `spice-600`, not blue or red Tailwind defaults.
+- Backgrounds and body text: neutral semantic tokens, not raw slate/blue grays.
+
+Defined in `src/index.css` `@theme` and `.dark` overrides.

@@ -1,7 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
 
+@custom-variant dark (&:where(.dark, .dark *));
 
-body{
-  font-family: 'Sora', sans-serif;
+/* Bronze Spice palette + neutral semantic tokens */
+@theme {
+  /* Spice scale (Bronze Spice) */
+  --color-spice-50: #fff1e6;
+  --color-spice-100: #ffe2cc;
+  --color-spice-200: #fec59a;
+  --color-spice-300: #fea867;
+  --color-spice-400: #fe8c34;
+  --color-spice-500: #fe6f01;
+  --color-spice-600: #cb5901;
+  --color-spice-700: #984201;
+  --color-spice-800: #652c01;
+  --color-spice-900: #331600;
+  --color-spice-950: #240f00;
+
+  /* Neutrals */
+  --color-neutral-50: #fafafa;
+  --color-neutral-100: #f5f5f5;
+  --color-neutral-200: #e5e5e5;
+  --color-neutral-300: #d4d4d4;
+  --color-neutral-400: #a3a3a3;
+  --color-neutral-500: #737373;
+  --color-neutral-600: #525252;
+  --color-neutral-700: #404040;
+  --color-neutral-800: #262626;
+  --color-neutral-900: #171717;
+  --color-neutral-950: #0a0a0a;
+
+  /* Semantic (light defaults) */
+  --color-background: #ffffff;
+  --color-foreground: var(--color-neutral-900);
+  --color-muted: var(--color-neutral-500);
+  --color-surface: var(--color-neutral-100);
+  --color-surface-elevated: var(--color-neutral-900);
+  --color-border: var(--color-neutral-200);
+  --color-accent: var(--color-spice-500);
+  --color-accent-highlight: var(--color-spice-400);
+  --color-accent-muted: var(--color-spice-700);
+  --color-header: rgb(255 255 255 / 0.75);
+  --color-overlay: rgb(0 0 0 / 0.4);
+}
+
+.dark {
+  --color-background: var(--color-neutral-950);
+  --color-foreground: var(--color-neutral-50);
+  --color-muted: var(--color-neutral-400);
+  --color-surface: var(--color-neutral-800);
+  --color-surface-elevated: var(--color-neutral-800);
+  --color-border: var(--color-neutral-700);
+  --color-header: rgb(10 10 10 / 0.85);
+  --color-overlay: rgb(0 0 0 / 0.6);
+}
+
+:root {
+  --header-offset: 5rem;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-offset);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  font-family: "Sora", sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.page-section {
+  scroll-margin-top: var(--header-offset);
+}
+
+.section-inner {
+  @apply mx-auto w-full max-w-6xl px-4 sm:px-6 md:px-12 lg:px-20;
+}
+
+.section-title {
+  @apply text-center text-2xl font-bold uppercase tracking-wide text-foreground md:text-3xl;
 }

@@ -1,0 +1,32 @@
+export const PROJECTS = [
+  {
+    id: "netflix-clone",
+    title: "Netflix Clone",
+    description: "Streaming Service Clone",
+    stack: "FRONTEND · UI/UX",
+    image: null,
+    imageLabel: "Netflix Clone",
+    downloadUrl: "#",
+    liveUrl: "#",
+  },
+  {
+    id: "ecommerce-clone",
+    title: "Ecommerce Clone",
+    description: "E-Commerce Platform",
+    stack: "DESIGN · FRONTEND · BACKEND",
+    image: null,
+    imageLabel: "MERN E-Commerce",
+    downloadUrl: "#",
+    liveUrl: "#",
+  },
+  {
+    id: "shopping-cart",
+    title: "Shopping Cart",
+    description: "Shopping Cart Demo",
+    stack: "FRONTEND",
+    image: null,
+    imageLabel: "Shopping Cart",
+    downloadUrl: "#",
+    liveUrl: "#",
+  },
+];
