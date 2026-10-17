@@ -52,7 +52,7 @@ const Home = forwardRef((props, ref) => (
     <div className="flex flex-1 flex-col justify-center gap-6 px-4 pb-10 pt-6 md:hidden">
       <div className="order-first">
         <div className="mt-4 flex items-center justify-center">
-          <img src="human.png" alt="Omolola Sodiq Temitope" />
+          <img src="/human.png" alt="Omolola Sodiq Temitope" />
         </div>
         <div className="mt-4 flex items-center justify-center space-x-4">
           <p className="text-md text-accent">3+ Years exp</p>
@@ -129,7 +129,7 @@ const Home = forwardRef((props, ref) => (
               />
               <div className="relative overflow-hidden rounded-2xl bg-background shadow-[0_8px_32px_rgba(254,140,52,0.18)] ring-1 ring-spice-200/70 dark:ring-spice-800/50">
                 <img
-                  src="human.png"
+                  src="/human.png"
                   alt="Omolola Sodiq Temitope"
                   className="mx-auto block max-h-[50vh] w-full object-contain lg:max-h-[54vh]"
                 />

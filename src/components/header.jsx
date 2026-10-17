@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { TextAlignJustify, X } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
 
@@ -35,10 +36,10 @@ const Header = ({ active, onNav }) => {
   return (
     <div className="relative">
       <div className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between border-b border-border bg-header px-4 py-3 backdrop-blur-md">
-        <div className="flex items-center space-x-2">
-          <img src="Temi_logo.svg" alt="lebo" className="h-10 w-10" />
+        <Link to="/" className="flex items-center space-x-2">
+          <img src="/Temi_logo.svg" alt="Temi Forge" className="h-10 w-10" />
           <h3 className="mt-1.5 text-xl font-semibold text-accent">Temi Forge</h3>
-        </div>
+        </Link>
 
         <div className="hidden items-center gap-3 md:flex">
           <div className="mt-3 mr-2 flex select-none space-x-3 rounded-lg p-2">

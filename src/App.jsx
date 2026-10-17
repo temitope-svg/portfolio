@@ -1,11 +1,13 @@
-import { View, Text } from 'react-native';
+import { Navigate, Route, Routes } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import ProjectDetail from "./pages/ProjectDetail";
 
 export default function App() {
   return (
-    <View className="flex-1 items-center justify-center bg-blue-500">
-      <Text className="text-white text-2xl font-bold">
-        Hello NativeWind
-      </Text>
-    </View>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/projects/:id" element={<ProjectDetail />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
   );
 }

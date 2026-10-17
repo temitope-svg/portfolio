@@ -35,7 +35,7 @@ export const getAboutBio = () => {
 export const ABOUT_BIO = getAboutBio();
 
 export const ABOUT_PARAGRAPHS = [
-  "I've contributed to products that solve real problems — including a social networking platform supporting real-time feeds and seamless media sharing, a full-featured e-commerce application designed to improve conversions through intuitive user flows and a streamlined checkout experience, and a doctor appointment booking system that meaningfully reduced scheduling friction and improved healthcare accessibility for its users.",
+  "I've contributed to products that solve real problems — including Aztralli, a multi-sided commerce marketplace spanning web and mobile, a full-featured restaurant brand and ordering experience designed to improve conversions through clear CTAs and streamlined flows, and billing and inventory tools built for freelancers and operators who need clarity over complexity.",
   "Beyond writing clean, scalable code, I enjoy working across the full product lifecycle — translating design requirements into reusable components, integrating backend services, and optimizing performance across devices and platforms. I approach every project with a balance of technical problem-solving and product thinking — because good software isn't just functional, it's enjoyable to use.",
   "Whether working independently or as part of a team, I build with care, communicate clearly, and remain committed to creating products that deliver meaningful value to users.",
 ];
@@ -47,7 +47,7 @@ export const EXPERIENCE = [
     title: "Frontend & Mobile Developer",
     period: "Ongoing",
     description:
-      "Designing and shipping responsive web applications and cross-platform mobile experiences using React and React Native. Delivered production-ready projects for clients across e-commerce, health, and social networking — from UI architecture to app store-ready builds.",
+      "Designing and shipping responsive web applications and cross-platform mobile experiences using React and React Native. Delivered production-ready projects for clients across e-commerce, marketplace, and ops tooling — from UI architecture to app store-ready builds.",
   },
   {
     id: "personal-projects",

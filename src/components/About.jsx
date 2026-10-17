@@ -14,7 +14,7 @@ const About = forwardRef((props, ref) => (
             <div className="relative mx-auto w-full max-w-sm md:mx-0 md:max-w-none">
               <div className="overflow-hidden rounded-xl bg-neutral-800 ring-1 ring-border">
                 <img
-                  src="human.png"
+                  src="/human.png"
                   alt="Omolola Sodiq Temitope"
                   className="aspect-square w-full object-cover object-top"
                 />
