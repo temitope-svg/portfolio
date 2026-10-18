@@ -6,6 +6,8 @@ import Portfolio from "../components/Portfolio";
 import About from "../components/About";
 import Services from "../components/Services";
 import Contact from "../components/Contact";
+import { DEFAULT_DESCRIPTION, DEFAULT_IMAGE_PATH, DEFAULT_TITLE } from "../config/site";
+import { usePageMeta } from "../hooks/usePageMeta";
 
 const SECTION_IDS = ["home", "portfolio", "about", "services", "contact"];
 
@@ -31,6 +33,13 @@ export default function HomePage() {
   const scrollLockRef = useRef(null);
   const location = useLocation();
   const navigate = useNavigate();
+
+  usePageMeta({
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+    imagePath: DEFAULT_IMAGE_PATH,
+    path: "/",
+  });
 
   const homeRef = useRef(null);
   const portfolioRef = useRef(null);

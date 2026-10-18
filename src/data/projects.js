@@ -62,6 +62,10 @@ export const PROJECTS = [
     ],
     outcome:
       "A production marketplace spanning web and mobile — focused on practical B2B and B2C commerce flows rather than a thin storefront demo.",
+    results: [
+      "Live at aztralli.com, with web and React Native clients on one backend",
+      "Four role experiences shipped: wholesaler, retailer, consumer, and dispatcher",
+    ],
   },
   {
     id: "jollof-bowl",
@@ -111,6 +115,10 @@ export const PROJECTS = [
     ],
     outcome:
       "A production brand site that converts curiosity into orders and catering bookings while staying true to the restaurant’s cultural identity.",
+    results: [
+      "Live at thejollofbowl.com",
+      "Order Online and Book Catering are primary paths on the public site",
+    ],
   },
   {
     id: "billflow",
@@ -188,6 +196,10 @@ export const PROJECTS = [
     ],
     outcome:
       "A practical billing toolkit that shows end-to-end product thinking — data models, document export, and cross-platform reach.",
+    results: [
+      "Web app live at billflowweb.netlify.app, plus a five-screen mobile companion",
+      "Invoices export to shareable PDFs",
+    ],
   },
   {
     id: "stockbook",
@@ -270,6 +282,10 @@ export const PROJECTS = [
     ],
     outcome:
       "A focused operations tool that makes stock levels easy to review and update without drowning users in dashboard noise.",
+    results: [
+      "Dashboard live at stockbookweb.netlify.app",
+      "Web and mobile cover products, sales, insights, and shop preferences",
+    ],
   },
   {
     id: "tripsplitz",
@@ -317,6 +333,10 @@ export const PROJECTS = [
     ],
     outcome:
       "A practical travel companion that keeps money talk simple so the trip stays fun.",
+    results: [
+      "One React Native codebase for iOS and Android",
+      "Home, notifications, profile, and trip detail shipped",
+    ],
   },
   {
     id: "portfolio",
@@ -352,6 +372,10 @@ export const PROJECTS = [
     ],
     outcome:
       "A branded, maintainable portfolio that showcases real work and makes it easy for clients to get in touch.",
+    results: [
+      "Six case studies with live links and screenshot galleries",
+      "Light and dark themes, scroll-spy navigation, and a working contact form",
+    ],
   },
 ];
 

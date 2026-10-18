@@ -3,8 +3,16 @@ import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 import { ArrowLeft, Code, ExternalLink } from "lucide-react";
 import Header from "../components/header";
 import Footer from "../components/Footer";
+import BulletList from "../components/BulletList";
 import ProjectGallery from "../components/ProjectGallery";
 import { PROJECTS, getProjectById, getRelatedProjects } from "../data/projects";
+import {
+  DEFAULT_DESCRIPTION,
+  DEFAULT_IMAGE_PATH,
+  DEFAULT_TITLE,
+  SITE_NAME,
+} from "../config/site";
+import { usePageMeta } from "../hooks/usePageMeta";
 
 const PLACEHOLDER_GRADIENTS = [
   "from-neutral-800 via-neutral-700 to-spice-900/40",
@@ -20,6 +28,13 @@ export default function ProjectDetail() {
   const navigate = useNavigate();
   const project = getProjectById(id);
   const related = getRelatedProjects(id, 3);
+
+  usePageMeta({
+    title: project ? `${project.title} · ${SITE_NAME}` : DEFAULT_TITLE,
+    description: project?.description ?? DEFAULT_DESCRIPTION,
+    imagePath: project?.image ?? DEFAULT_IMAGE_PATH,
+    path: project ? `/projects/${project.id}` : "/",
+  });
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -147,23 +162,14 @@ export default function ProjectDetail() {
 
                 <section className="space-y-4">
                   <h2 className="text-xl font-bold text-foreground md:text-2xl">Key Features</h2>
-                  <ul className="space-y-3">
-                    {project.features.map((feature) => (
-                      <li key={feature} className="flex gap-3 text-muted">
-                        <span
-                          className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent-highlight"
-                          aria-hidden="true"
-                        />
-                        <span className="leading-relaxed">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <BulletList items={project.features} />
                 </section>
 
                 {project.outcome ? (
                   <section className="space-y-4 rounded-xl border border-border bg-surface p-5 ring-1 ring-spice-400/10 sm:p-6">
                     <h2 className="text-xl font-bold text-foreground">Outcome</h2>
                     <p className="leading-relaxed text-muted">{project.outcome}</p>
+                    <BulletList items={project.results} />
                   </section>
                 ) : null}
               </div>

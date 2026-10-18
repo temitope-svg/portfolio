@@ -45,25 +45,27 @@ export const EXPERIENCE = [
     id: "freelance",
     role: "Freelance",
     title: "Frontend & Mobile Developer",
-    period: "Ongoing",
+    period: `${getExperienceYears()}+ years · Present`,
     description:
-      "Designing and shipping responsive web applications and cross-platform mobile experiences using React and React Native. Delivered production-ready projects for clients across e-commerce, marketplace, and ops tooling — from UI architecture to app store-ready builds.",
+      "Client products in marketplace, hospitality, and mobile. I build the interface and ship it to production.",
+    highlights: [
+      "Aztralli (2026) — frontend and mobile on a four-role marketplace, live at aztralli.com",
+      "Jollof Bowl (2025) — frontend for the public brand site, live at thejollofbowl.com",
+      "TripSplitz (2025) — React Native app for splitting travel costs",
+    ],
   },
   {
-    id: "personal-projects",
-    role: "Open Source Mobile and Web Developer",
-    title: "Personal Projects and UI Engineer",
-    period: "Ongoing",
+    id: "personal-products",
+    role: "Personal products",
+    title: "Frontend Developer",
+    period: "2025–2026",
     description:
-      "Built and maintained a suite of personal projects exploring real-world product challenges — including deep linking integrations, performant list rendering, and scalable component systems across both web and mobile platforms.",
-  },
-  {
-    id: "product-collaborations",
-    role: "UI Engineer and Frontend Developer",
-    title: "Product Collaborations",
-    period: "Recent",
-    description:
-      "Collaborated on cross-functional product teams to translate design systems into reusable, accessible UI components. Owned frontend performance, API integration, and mobile build pipelines from development through to release.",
+      "Products I designed and built end to end. Billflow, Stockbook, and this portfolio have public repos.",
+    highlights: [
+      "Billflow — invoicing web app and mobile companion, live on Netlify",
+      "Stockbook — inventory dashboard and mobile app, live on Netlify",
+      "Temi Forge Portfolio — this site, with case studies and a contact form",
+    ],
   },
 ];
 
